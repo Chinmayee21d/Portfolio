@@ -329,30 +329,30 @@ window.addEventListener("scroll", scrollUp);
 
 /*==================== DARK LIGHT THEME ====================*/
 
-const themeButton = document.getElementById("theme-button");
-const darkTheme = "dark-theme";
-const iconTheme = "uil-sun";
+// const themeButton = document.getElementById("theme-button");
+// const darkTheme = "dark-theme";
+// const iconTheme = "uil-sun";
 
-// Previously selected topic (if user selected)
-const selectedTheme = localStorage.getItem("selected-theme");
-const selectedIcon = localStorage.getItem("selected-icon");
+// // Previously selected topic (if user selected)
+// const selectedTheme = localStorage.getItem("selected-theme");
+// const selectedIcon = localStorage.getItem("selected-icon");
 
-// We obtain the current theme that the interface has by validating the dark-theme class
-const getCurrentTheme = () =>
-  document.body.classList.contains(darkTheme) ? "dark" : "light";
-const getCurrentIcon = () =>
-  themeButton.classList.contains(iconTheme) ? "uil-moon" : "uil-sun";
+// // We obtain the current theme that the interface has by validating the dark-theme class
+// const getCurrentTheme = () =>
+//   document.body.classList.contains(darkTheme) ? "dark" : "light";
+// const getCurrentIcon = () =>
+//   themeButton.classList.contains(iconTheme) ? "uil-moon" : "uil-sun";
 
-//validate if user previously chose a theme
-if (selectedTheme) {
-  // if theme selected by user previously then we add/remove classes again based on localStorage
-  document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
-    darkTheme
-  );
-  themeButton.classList[selectedIcon === "uil-moon" ? "add" : "remove"](
-    iconTheme
-  );
-}
+// //validate if user previously chose a theme
+// if (selectedTheme) {
+//   // if theme selected by user previously then we add/remove classes again based on localStorage
+//   document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
+//     darkTheme
+//   );
+//   themeButton.classList[selectedIcon === "uil-moon" ? "add" : "remove"](
+//     iconTheme
+//   );
+// }
 //if initially there is no local storage ie. user has not made a choice and this is first time loading
 //then we check if browser/OS is in dark mode and then add dark theme if required by default
 else if (
